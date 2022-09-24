@@ -24,7 +24,7 @@ void loop(){
   float duration = pulseIn(echo, HIGH);
   float distance = (duration * 0.0343)/2;
   
-  if(temperature > 50){
+  if(temperature > 60){
     digitalWrite(greenBulb, LOW);
     digitalWrite(redBulb, HIGH);
   }
@@ -33,7 +33,7 @@ void loop(){
   	digitalWrite(redBulb, LOW);
   }
   
-  if(distance < 150)
+  if(distance < 200)
     digitalWrite(buzzer, HIGH);
   else
     digitalWrite(buzzer, LOW);
